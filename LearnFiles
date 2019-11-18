@@ -1,0 +1,73 @@
+# files
+'''
+Open a file: works with access mode readonly, writeOnly mode, write+ mode
+Close a file:
+read from file
+write into file
+'''
+#open() inbuild method  --> returns file object
+#file_Object=open(file_name[access_mode])
+'''
+r  default to readonly
+rb read only in binary format
+r+ file for reading and writing in binary format
+rb+ read and write in binary format
+w write only - overwrite the file exists. if not create the file
+a appending : add at the end
+ab appending in binary format
+a+  both appending and reading format
+ab+ appending and reading in binary format
+w+ file for both writing and reading 
+wb+ file for both writing and reading in binary format
+'''
+#write(): py take binary data not just text
+#read(): optionaly takes count argument to read (to read upto a count). python string can be binary data apart from text data           --> fileobject.read([count])
+#rename() module in py to rename file using operating system           -->os.rename(current_file_name,new_file_name)
+#remove(file_name): deleting a file                --> os.remove(file_name)
+
+#example
+#open the file write text for n number of times
+import os
+
+newfile=open("TextFileA.txt","w+")
+for i in range(1,10):
+    newfile.write("\nHello,welcome to python")
+newfile.close()
+# open the file in read mode
+newfile=open("TextFileA.txt","r")
+for i in range(1,10):
+   print(newfile.read())
+newfile.close()
+
+# read only 5 charators in a line
+newfile=open("TextFileA.txt","r")
+for i in range(1,10):
+    print(newfile.read(5))
+# file attribute is
+# fileobject.mode
+#fileobject.name
+#fileobject.softspace : returns the boolean(0/1) whether a space character needs to be printed before another value when using print statment
+print("mode is ",newfile.mode)
+print("file name is ",newfile.name)
+#print("file softspace is ",newfile.softspace)
+
+
+#fileobject.seek(): change the curretn file position --> seek(offset[,from])
+#fileobject.tell(): tells you the current position within the file; in other words, next read or write will occure at that many bytes from the begining of the file
+newfile.seek(5)
+print(newfile.read())
+print(newfile.tell())
+
+newfile.close()
+#rename the file and rename the file
+os.rename('TextFileA.txt','new_TextFileA.txt')
+# remove
+os.remove('new_TextFileA.txt')
+
+
+
+
+
+
+
+

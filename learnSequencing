@@ -1,0 +1,60 @@
+#programming about logic , store data and dealing with data
+# different types of data: how do arrange or organize data, types of data using python
+# it has sequences : nothing but countiniues collectoins of datatype. indexing or slizing.
+# operation of sequence operation is
+# concatenation : join 2 sequences and create new sequences
+# repetition:
+# membership testing: check variable is member or not of a sequence
+# slicing: slice a sub portion of  any sequence [index 1-index 4]
+# indexing: items are indexed from 0
+
+list=["Hadoop","python","Android"]
+print(list[1])
+print(list[0:2])
+print(list[-1])   #reverse traversal
+print(list[-2])   #reverse traversal
+print(list[-3])   #reverse traversal
+
+print(list+['react','Angular','data science'])
+print(list *3)
+
+print("Hadoop" in list,"Angular" in list)
+
+list[1]='java'
+print(list)
+
+del(list[1])
+print(list)
+
+list=[1,2,3]
+list.append("machine learning")
+print(list)
+
+list.extend(['js','py'])
+print(list)
+
+'''
+types of sequencing in python
+lists:
+  1. its a data type 
+  2. with [] and ,
+  3. update list, list length, repetition, concatenation, delete list elements, slicing, pop 
+  4. used for sequence accessing and processing
+  
+string
+dictionaries
+tuples
+sets
+
+'''
+#list
+list=[10,20,30,40,50,60,70,80,90]
+print(list.pop(3)) # pop out of the sequence (means able to return pop element)
+print(list.remove(3))#just remove (retruns nothing)
+print(list[3]) # if won't remove the element for the list and destroy the collection
+print(list)
+
+
+
+
+
