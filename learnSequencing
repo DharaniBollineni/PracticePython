@@ -41,6 +41,13 @@ lists:
   3. update list, list length, repetition, concatenation, delete list elements, slicing, pop 
   4. used for sequence accessing and processing
   
+# extend : extend the list by adding elements at the end of the list
+# insert: insert an item at a given position
+# remove an item from the list
+# sorted means it sorts the list
+  # when to use list?
+  #if you have a collection of data that doesn't need random access (sequence access)
+  
 string
 dictionaries
 tuples
@@ -50,9 +57,50 @@ sets
 #list
 list=[10,20,30,40,50,60,70,80,90]
 print(list.pop(3)) # pop out of the sequence (means able to return pop element)
-print(list.remove(3))#just remove (retruns nothing)
 print(list[3]) # if won't remove the element for the list and destroy the collection
 print(list)
+# print(list.remove(3))#just remove (retruns nothing)
+
+#list comprehension
+#list example with for loop
+list1=[x**2 for x in [11,12,13,14,15]]
+print("list1",list1)
+
+# above code is equal to below code
+list2=[]
+for x in [1,2,3,4,5]:
+    list2.append(x**2)   # add item to the end of the list
+print("list2",list2)
+
+list1.extend(['g','h'])
+print(list1)
+
+list1.insert(1,'Scripting')
+print(list1)
+
+list4=['python','java','haddop','Android']
+print(list4)
+print(sorted(list4))
+
+# print list in reverse order without change the original list
+list5=['python','java','haddop','Android']
+for course in list5[::-1]:
+    print(course)
+
+# A Tuple inside a list
+list=[(2,3,4),("python","Java")]
+#-----0th-------1st--------
+#----0,1,2----0,1-----------
+print(list)
+
+print(len(list))
+print(list[1][0:1])
+
+# we can't modify the the tuple if it is inside the list a list the overall is become immutable
+# list1.remove(3)
+# print(list1)
+
+
 
 
 
